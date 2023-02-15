@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -63,6 +64,7 @@ function App(): JSX.Element {
   };
 
   return (
+  <NavigationContainer>
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
@@ -80,7 +82,7 @@ function App(): JSX.Element {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-          <Section title="See Your Changes">
+          <Section title="See Your Changes ">
             <ReloadInstructions />
           </Section>
           <Section title="Debug">
@@ -93,6 +95,7 @@ function App(): JSX.Element {
         </View>
       </ScrollView>
     </SafeAreaView>
+      </NavigationContainer>
   );
 }
 
